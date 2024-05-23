@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Super: Online Shopping</title>
+    <!--stylesheets-->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./reset.css" type="text/css">
+    <link rel="stylesheet" href="./about.css" type="text/css">
+    <!--google fonts and font awesome icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="icon" href="./Images/logo22.png">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <nav>
+            <section class="logo"><a href="./index.html"><img src="./Images/logo22.png" alt="logo"></a></section>
+            <section class="search-box">
+                <input type="search" placeholder="Search Items">
+            </section>
+            <!--location-selector-->
+            <section class="location">
+                <i class="fa fa-map-marker"></i>
+                <select name="location">
+                    <option value="Colombo">Kandy</option>
+                    <option value="Kandy">Colombo</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Kundasale">Kundasale</option>
+                  </select>
+            </section>
+            <!--sidebar-->
+            <ul class="sidebar">
+                <li onclick = hideSidebar()><a href="#" class="links"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                <li><a href="./index.html" class="links">Home</a></li>
+                <li><a href="./orders.html" class="links">Orders</a></li>
+                <li><a href="#" class="links">Products <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li><a href="./vegetables.html" class="sublinks">Vegetables</a></li>
+                <li><a href="./dairy.html" class="sublinks">Dairy Products</a></li>
+                <li><a href="./juices.html" class="sublinks">Beverages</a></li>
+                <li><a href="./cosmetics.html" class="sublinks">Cosmetics & Skin care</a></li>
+                <li><a href="./about.html" class="links">About Us</a></li>
+                <li><a href="#" class="links">Login | Sign Up <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li><a href="./signup.html" class="sublinks">Member Login</a></li>
+                <li><a href="./login.html" class="sublinks">Loyalty Registration</a></li>
+                
+              </ul>
+              <!--navigation menu-->
+              <ul>
+                <li class="hideOnMobile"><a href="./index.html" class="links">Home</a></li>
+                <li class="hideOnMobile"><a href="./orders.html" class="links">Orders</a></li>
+                <section class="dropdown">
+                    <li class="hideOnMobile"><a href="#" class="links">Products</a></li>
+                    <section class="dropdown-content">
+                      <a href="./vegetables.html">Vegetables</a> 
+                      <a href="./dairy.html">Dairy Products</a>
+                      <a href="./juices.html">Beverages</a> 
+                      <a href="./cosmetics.html">Cosmetics & Skin care</a>
+                    </section>
+                </section>
+                <li class="hideOnMobile"><a href="./about.html" class="links">About Us</a></li>
+                <section class="dropdown">
+                    <li class="hideOnMobile"><a href="#" class="links"><i class="fa fa-user" aria-hidden="true"></i>Login | Sign Up</a>
+                    <section class="dropdown-content">
+                        <a href="./signup.html">Member Login</a>
+                        <a href="./login.html">Loyalty Registration</a>
+                    </section>
+                </section>
+                <li class="menu-button" onclick=showSidebar()><a href="#" class="links"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                    style="fill:#FFFFFF;">
+                    <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+                    </svg></i></a></li>
+                <li class="cart"><a href="#" class="links"><i class="fa fa-shopping-cart" aria-hidden="true"></a></i></li>
+              </ul>
+        </nav>
+
+        <!--JavaScript for side bar menu-->
+        <script>
+            function showSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'none'
+            }
+          </script>
+
+    </header>
+    <main>
+        <section class="main-image">
+                <img src="./Images/aboutusbanner2.jpeg" alt="main image of the abous us section">
+        </section>
+        <section class="paragraph">
+            <h1>Welcome to <span>Mega Super</span></h1>
+            <h2>About Us</h2>
+            <p>Mega Super is proudly Sri Lankan, owned and operated over the last 2 years, delivering the freshest quality products, along with great value, serving thousands of Sri Lankans every day. Mega Super operates 4 supermarkets operating with the core purpose of improving the quality of life for the nation, the supermarkets are conveniently located across the country providing our shoppers with a world class retail experience. At Mega Super, we pride ourselves on being your neighborhood supermarket, dedicated to providing you with the freshest produce, highest quality groceries, and exceptional customer service. With multiple branches conveniently located throughout the country, we strive to be your one-stop destination for all your grocery needs.</p>
+            <h2>Our Mission</h2>
+            <p>Our mission is simple: to offer our customers the best shopping experience possible. We aim to achieve this by consistently providing top-notch products, maintaining clean and organized stores, and employing friendly and knowledgeable staff who are always ready to assist you.</p>
+            <h2>Our Products</h2>
+            <p>From farm-fresh vegetables to premium dairy, beverages and cosmetics, Mega Super is stocked with a wide array of high-quality products to fulfill all your culinary desires. We also feature a diverse selection of organic, gluten-free, and international items to cater to every dietary preference and taste.</p>
+        </section>
+        <h2 class="branches">Our Branches</h2>
+        <section class="branch-content">
+            <section class="branch"> 
+                <h2>Kandy Branch</h2>
+                <img src="./Images/location2.png" alt="image of the kandy branch">
+                <p>Situated in a residential neighborhood, the Suburban Branch of Mega Super is a spacious store that serves families and suburbanites. It features a comprehensive grocery section with a diverse range of fresh produce, pantry staples, and household items</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.60389551364!2d80.62385157467948!3d7.285827892721528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3697dd4f3de9b%3A0x46c9685d6f463f6a!2sODEL%20Mall%20Kandy!5e0!3m2!1sen!2slk!4v1715880110104!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="branch">
+                <h2>Colombo Branch</h2>
+                <img src="./Images/location4.png" alt="image of the colombo branch">
+                <p>Located in the heart of the city, the Downtown Branch of Mega Super caters to busy urban dwellers. It's a compact store with a focus on convenience, offering a wide selection of grab-and-go meals, snacks, and ready-to-eat items for professionals on the move</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.916202007666!2d79.84205744262448!3d6.922958039226678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259158f32b4a3%3A0x9502607ad9719a99!2sUnion%20Place%2C%20Colombo!5e0!3m2!1sen!2slk!4v1715880981541!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="branch">
+                <h2>Kegalle Branch</h2>
+                <img src="./Images/location1.png" alt="image of the kegalle branch">
+                <p>Situated near a university or college campus, the College Campus Branch of Mega Super caters to students, faculty, and staff members. This branch offers a range of affordable, convenient, budget-friendly groceries</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5482.12386403663!2d80.34227945539162!3d7.252248154383477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae316b7a159fd01%3A0xf7cdc3d49f78f117!2sKegalle%20Town!5e0!3m2!1sen!2slk!4v1715881080566!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="branch">
+                <h2>Kundasale Branch</h2>
+                <img src="./Images/location3.png" alt="image of the kundasale branch">
+                <p>Situated in a suburban community, our spacious branches provide a shopping experience that's both convenient and delightful. With ample parking, expansive aisles, and a diverse range of offerings</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15830.562899989463!2d80.67545044268299!3d7.2816562836081875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3673aaf327b11%3A0xf80fdc38fa2c638e!2sSunrise%20Super%20-%20Kundasale!5e0!3m2!1sen!2slk!4v1715881163882!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </section>
+        <section class="table">
+            <h2>Supermarket Services</h2>
+
+        <table>
+           <thead>
+            <tr>
+              <th>Service</th>
+              <th>Description</th>
+              <th>Availability</th>
+            </tr>
+           </thead>
+          <tbody>
+             <tr>
+              <td>Delivery</td>
+              <td>Home delivery of groceries and other products ordered online or via phone. 24/7 hour service</td>
+             <td>Available</td>
+             </tr>
+             <tr>
+              <td>Catering</td>
+              <td>Providing food and beverage options for events such as parties, meetings, and gatherings.</td>
+              <td>Available</td>
+             </tr>
+             <tr>
+               <td>Party Planning</td>
+               <td>Assistance in planning and organizing events, including selection of food, beverages, decorations, and party supplies.</td>
+               <td>On request</td>
+             </tr>
+           </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">For more information about additional services, please contact <a href="#">+94767538422</a></td>
+              </tr>
+            </tfoot>
+        </table>
+        </section>
+    </main>
+    <!--footer section-->
+    <footer>
+        <section class="main-content">
+            <section class="left-box">
+                <h2>About Us</h2>
+                <section class="content">
+                    <p>Sri Lanka's freshest online grocery store offers daily necessities, same-day, next-day, and saver options, allowing customers to conveniently order from home or anywhere.</p>
+                    <section class="socials">
+                        <li><a href=""><i class="fa fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa fa-google"></i>Google</a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
+                    </section>
+                    <!--divider line -->
+                   <hr class="divider">
+                   
+                </section>
+            </section>
+            <section class="center-box">
+                <h2>Address</h2>
+                <section class="content">
+                    <section class="place">
+                        <i class="fa fa-map-marker" aria-hidden="true"> Kandy, Sri Lanka</i>  
+                    </section>
+                    <section class="phone">
+                        <i class="fa fa-phone" aria-hidden="true"> +94767538422</i>  
+                    </section>
+                    <section class="email">
+                        <i class="fa fa-envelope" aria-hidden="true"> megasuper@gmail.com</i>  
+                    </section>
+                    <!--divider line-->
+                    <hr class="divider">
+                    
+                </section>
+            </section>
+            <section class="right-box">
+                <h2>Contact Us</h2>
+                <section class="content">
+                    <form action="">
+                        <section class="email">
+                            <section class="text"> Email *</section>
+                            <input type="email" required>
+                        </section>
+                        <section class="msg">
+                            <section class="text">Message *</section>
+                            <textarea type="text" rows="2" cols="25" required></textarea>
+                        </section>
+                        <section class="button">
+                            <button type="submit">Submit</button>
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+        <section class="footer-bottom">
+            <section class="copyright">
+                <p>&copy;2024 Mega Super (Pvt) Ltd. All Rights Reserved</p>
+            </section>
+            <section class="payment-icons">
+                <img src="./Images/visa.png"  class="mastercard" alt="Mastercard-logo">
+                <img src="./Images/master card.png" class="visa" alt="Visa-logo">
+                <img src="./Images/american-express1.png" class="americanexpress" alt="American-Express-logo">
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
+
+<!--References for images-->
+<!-- 
+    Branch images - https://www.alamy.com
+-->
