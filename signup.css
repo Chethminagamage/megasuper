@@ -1,0 +1,91 @@
+:root{
+    --unique-percentage: 100%;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+.login-container{
+    position: relative;
+    width: var(--unique-percentage);
+    height: 100vh;
+    display: flex;
+}
+.image-box{
+    position: relative;
+    width: 50%;
+    height: var(--unique-percentage);
+}
+.image-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--unique-percentage);
+    height: var(--unique-percentage);
+    object-fit: cover;
+}
+.login-content-box{
+    display: flex;
+    width: 50%;
+    height: var(--unique-percentage);
+    justify-content: center;
+    align-items: center;
+}
+.login-content-box .login-form{
+    width: 50%;
+}
+.login-content-box h2{
+    color: darkgreen;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(0, 28, 0);
+    display: inline-block;
+    letter-spacing: 1px ;
+}
+.input-box a{
+    text-decoration: none;
+}
+.login-content-box .input-box{
+    margin-bottom: 20px;
+}
+.input-box span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.input-box input{
+    width: var(--unique-percentage);
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid darkgreen;
+}
+.input-box input[type="submit"]{
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+.input-box input[type="submit"]:hover{
+    background-color: rgb(0, 64, 0);
+}
+.remember{
+    margin-bottom: 10px;
+}
+}
+@media(max-width:780px){
+    .image-box{
+        display: none;
+    }
+    .login-container .login-content-box{
+        display: flex;
+        width: var(--unique-percentage);
+        height: var(--unique-percentage);
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+    }
+}

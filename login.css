@@ -1,0 +1,132 @@
+:root{
+    --border: 1px solid #ccc;
+    --margin: 5px 0;
+    --max-width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 800px;
+
+.register-container{
+    max-width: 800px;
+    width: var(--max-width);
+    padding: 25px 30px;
+    height: 700px; 
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgb(226, 226, 226);
+    box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+}
+h2{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(1, 73, 1);
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+.register-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 20px 0;
+}
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.gender, .input-box label{
+    width: 95%;
+    color: black;
+    font-weight: 300;
+    margin: var(--margin);
+    font-size: 16px;
+    
+}
+select{
+    color: rgba(0, 0, 0, 0.524);
+    border-radius: 5px;
+    border: var(--border);
+    width: 47%;
+    height: 40px;
+    
+}
+.input-box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: var(--border); 
+    outline: none;
+}
+.input-box .address{
+    height: 80px;
+}
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+    margin: var(--margin);
+    padding: 10px;
+    line-height: 1.5;
+}
+.alert a{
+    font-weight: 400;
+}
+.button-container{
+    margin: 15px 0;
+    width: var(--max-width);
+}
+.button-container a{
+    width: var(--max-width);
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(24, 75, 24);
+    color: white;
+    letter-spacing: 2px;
+}
+.button-container button:hover{
+    background-color: rgb(22, 62, 22);
+}
+.button-container a{
+    text-decoration: none;
+}
+}
+
+@media(max-width:580px){
+    main .register-container{
+        max-width: var(--max-width);
+        margin: 40px;
+    }
+    main .register-content{
+        max-height: 500px;
+        overflow: auto;
+
+    }
+    main .register-content .input-box{
+        margin-bottom: 15px;
+        width: var(--max-width);
+        justify-content: center;
+    }
+    main .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,154 @@
+:root{
+    --clr-theme: darkgreen;
+    --clr-light: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+.loyalty-container{
+    max-width: 800px;
+    width: 100%;
+    padding: 25px 30px;
+    height: max-content; 
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(224, 224, 224, 0.642);
+    box-shadow: 0 0px 5px rgba(0,0,0,0.6);
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.loyalty-container h1{
+    text-align: center;
+    border-bottom: 1px solid rgb(67, 67, 67);
+    color: rgb(1, 73, 1);
+}
+.details h2{
+    color: var(--clr-theme);
+}
+
+.loyalty-card{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.loyalty-card img{
+    width: 180px;
+    height: 150px;
+}
+.loyalty-card .details{
+    flex: 1;
+    padding: 10px 30px;
+}
+.loyalty-card h2{
+    margin-top: 0;
+}
+.loyalty-card p{
+    line-height: 1.6;
+}
+.loyalty-selection label{
+    font-weight: 500;
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 20px;
+}
+select{
+    width: 70%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.524);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+}
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+    margin: 5px 0;
+    padding: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+.alert a{
+    font-weight: 400;
+}
+.button-container{
+    margin: 15px 0;
+    width: 100%;
+}
+.button-container a{
+    width: 50%;
+    float: right;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(24, 75, 24);
+    color: var(--clr-light);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.button-container button:hover{
+    background-color: rgb(22, 62, 22);
+}
+.back-button{
+    margin: 10px 0 0 10px;
+}
+.back-button{
+    width: 30%;
+    height: 45px;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(24, 75, 24);
+    letter-spacing: 2px;
+}
+.back-button a{
+    text-decoration: none; 
+    color: var(--clr-light);  
+}
+.back-button:hover{
+    background-color: rgb(22, 62, 22);
+}
+.back-button i{
+    color: var(--clr-light);
+    margin-right: 10px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+}
+}
+
+@media(max-width:700px){
+    main .loyalty-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    main .loyalty-container{
+        width: 90%;
+        padding: 40px;
+        margin: 30px auto;
+    }
+    main .loyalty-card img{
+        margin-bottom: 20px;
+    }
+    main .loyalty-selection select{
+        width: 100%;
+        margin-top: 20px;
+    }
+    main .back-button i{
+        display: none;
+    }
+}

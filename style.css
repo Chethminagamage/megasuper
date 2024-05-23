@@ -1,0 +1,695 @@
+:root{
+    --clr-background: #fff; 
+    --clr-prior: #0d3801;
+
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: var(--clr-background);  
+    min-height: 100vh;
+}
+
+/* Header*/
+header{
+    position: relative;
+    width: 100%;
+}
+.logo{
+    width: 110px;
+    height: 150px;
+    padding: 10px;
+    margin-left: 30px;
+}
+.upper{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li.logo{
+    flex: 1;
+}
+.items{
+    display: flex;
+    margin-top: 10px;
+
+}
+nav{
+    background-color:var(--clr-prior);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+}
+/* Dropdown for products and registration*/
+.dropbtn {
+    background-color: #0c3401;
+    font-size: 16px;
+    border: none;
+    color: white;
+}
+  
+/* The container <section> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default)*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+/*search box styling*/
+.search-box{
+    padding: 15px;
+    margin: auto 0;
+    font-size: 14px;
+    transition: box-shadow 0.25s;
+}
+.search-box input{
+    border: none;
+    outline: none;
+    background-color: var(--clr-background);
+    height: 35px;
+    padding: 0 10px;
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.location{
+    padding: 15px;
+    margin: auto 0;
+    border-radius: 5px;
+    color: var(--clr-background);
+    font-weight: bold;        
+    color: rgba(0, 0, 0, 0.524);
+}
+.location i{
+    color: var(--clr-background);
+    margin-right: 8px;
+}
+.location select{
+    width: 80px;
+    outline: none;
+    border: 2px solid var(--clr-background);
+    border-radius: 5px;
+    height: 20px;
+    font-size: 12px;
+}
+.location select:hover{
+    background-color: rgb(233, 233, 233);
+}
+
+.search-box input:hover, .search-box input:focus{
+    border: 1px solid #000000;
+    background-color: rgb(233, 233, 233);
+}
+
+nav ul{
+    width: 60%;
+    float: right;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 70px;
+}
+nav .links{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--clr-background);
+}
+nav .links:hover{
+    background-color: #3b7429;
+    color: black;
+}
+.cart{
+    padding: 20px;
+    color: var(--clr-background);
+    font-size: 20px;
+}
+.cart:hover{
+    background-color: #3b7429;
+}
+
+/*sidebar styling*/
+.sidebar{
+    position: absolute;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #0d3801f0;
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 999;
+}
+.sidebar li{
+    width: 100%;
+    height: 50px;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+/*sublinks in sider*/
+.sublinks{
+    text-align: center;
+    color: rgb(38, 184, 36);
+    text-decoration: none;
+    list-style: disc;
+}
+
+
+@media(max-width: 800px){
+    .hideOnMobile, .cart{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+      color: var(--clr-background);
+    }
+    
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+    .search-box input{
+        width: 170px;
+    }
+    .search-box{
+        padding: 0;
+        margin: auto;
+    }
+}
+/*Image Slider*/
+.slider{
+    overflow: hidden;
+}
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+.slider figure img{
+    float: left;
+    width: 20%;
+    height: 600px;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        right: -400%;
+    }
+}    
+
+/* product categories*/
+
+
+.box-container{
+    border: 0px  solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.box{
+    padding: 3rem;
+    background: rgb(224, 224, 224);
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.box:hover{
+    box-shadow: 1px 1px 10px 4px rgba(39, 39, 39, 0.77);
+}
+.box img{
+    height: 10rem;
+    margin-left: 10px;
+}
+.box h3{
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+.categories h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: darkgreen;
+    font-size: 1.5rem;
+}
+.btn{
+    background-color: #56a83d;
+    text-decoration: none;
+    height: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--clr-background);
+    font-size: 15px;
+}
+.btn:hover{
+    background-color: #468732;
+}
+/* deals section */
+.offers {
+    padding: 10px 20px;
+    margin: 40px 0 40px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.offers h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.offer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.offer-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-background);
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.offer-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlay{
+    height: 0;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(transparent, #0000009f 40%);
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: height 0.5s;
+}
+.offer-itemLhover img{
+    transform: scale(1.2);
+}
+.offer-item:hover .overlay{
+    height: 80%;
+}
+
+.offer-item h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: var(--clr-background);
+}
+
+.offer-item p {
+    font-size: 1em;
+    margin: 0.5em 0;
+    color: white;
+}
+.offer-item span{
+    text-decoration: line-through #d70505;
+}
+
+.offer-item .offer-btn {
+    background-color: #56a83d;
+    color: var(--clr-background);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.offer-btn:hover{
+    background-color: #3a7129;
+    color: black;
+}
+
+/*Introduction & services*/
+
+.intro p{
+    text-align: center;
+    padding: 0 30px;
+    margin-top: 10px;
+}
+.intro h2{
+    color: rgb(0, 85, 0);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.intro span{
+    color: rgb(200, 3, 3);
+}
+.intro .welcome{
+    font-size: 2rem;
+}
+.intro{
+    padding-bottom: 30px;
+}
+.service-area h1{
+    font-size: 2rem;
+    text-align: center;
+    color: #4e4c4c;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    margin-bottom: 50px;
+}
+.service-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s ease; 
+}
+.service-item:hover {
+    transform: scale(1.1);
+}
+.services ol li{
+    list-style:none;
+}
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4CAF50;
+}
+.text {
+    font-size: 16px;
+    color: #333;
+    font-weight: 300;
+}
+
+
+/*banner-bottom*/
+.banner-bottom{
+    display: flex;
+}
+.banner-bottom img{
+    width: 50%;
+    margin-bottom: 50px;
+}
+.banner-bottom a img{
+    width: 100%;
+}
+/*footer*/
+footer{
+    background-color: #0d3801;
+    color: rgb(14, 29, 44);
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.socials{
+	list-style:none;
+	display:flex;
+	align-items: center;
+	justify-content:center;
+	margin:1rem 0 3rem 0;
+}
+.social i{
+    color: var(--clr-background);
+}
+.main-content h2{
+    color: #64bf47;
+}
+.content p{
+    margin-top: 20px;
+    text-align:justify;
+    color: var(--clr-background);
+    font-size: 14px;
+}
+.content i{
+    color: white;
+}
+.content .text{
+    color: var(--clr-background);
+    font-size: 14px;
+}
+.email input{
+    border-radius: 10px;
+    border: 1px solid;
+    outline: none;
+    width: 250px;
+    height: 40px;
+}
+.msg textarea{
+    border-radius: 10px;
+    width: 250px;
+    height: 80px;
+    border: 1px solid;
+}
+.button{
+    font-weight: 400;
+}
+.footer-bottom {
+    background-color: #000000;
+    width: 100%;
+    height: 70px;
+    float: left;
+    color: var(--clr-background);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom p {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.payment-icons {
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 2rem;
+    padding: 5px;
+}
+.copyright{
+    width: 60%;
+}
+.footer-bottom p{
+	font-size:14px;
+	word-spacing:2px;
+	text-transform:capitalize;
+}
+.place, .phone, .email{
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.socials li{
+	margin:0 10px;
+}
+.socials a{
+	text-decoration:none;
+	color:var(--clr-background);
+}
+.socials a i{
+	font-size:1.1rem;
+	transition: color .4s ease;
+    margin-right: 10px;
+}
+.socials a:hover i{
+	color: #64bf47;
+}
+.socials a:hover{
+    color: #64bf47;
+    transition: color .4s ease;
+}
+section h2{
+    font-size: 20px;
+}
+.divider{
+    display: none;
+    border: 0;
+    border-radius: 10%;
+    height: 1px;
+    background-color: var(--clr-background);
+    margin: 30px 30px; 
+
+}
+.payment{
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.left-box{
+    width: 45%;
+    padding: 20px;
+    float: left;
+}
+.center-box{
+    width: 25%;
+    padding: 20px;
+    float: left;
+}
+.right-box{
+    width: 30%;
+    padding: 20px;
+    float: left;
+}
+/* Add another media query to add a break point at 800px*/ 
+@media (max-width:800px) {
+    .left-box, .center-box, .right-box{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        padding: 0 30px; 
+    }
+    .logo{
+       
+        padding: 20px 0;
+    }
+    .divider{
+        display: flex;
+    }
+    .mastercard, .visa, .americanexpress{
+        width: 40px;
+    }
+    .payment-icons{
+        gap: 0.5rem;
+    }
+    .copyright{
+        width: 70%;
+        font-size: 3vw;
+    }
+    .box img{
+        margin-left: 20px;
+    }
+    .box{
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+    }
+    .location{
+        display: none;
+    }
+    .banner-bottom{
+        display: grid;
+    }
+    .banner-bottom img{
+        width: 100%;
+    }
+    .offers{
+        border-radius: 10px ;
+    }
+    .slider figure img{
+        height: auto;
+    }
+    .intro .welcome{
+        font-size: 1.5rem;
+    }
+    .offers h2{
+        font-size: 1.5rem;
+    }
+  }
+  
+  
+@media (max-width:400px) {
+    .left-box, .center-box, .right-box{
+        width: 100%;
+      }
+  }
