@@ -1,0 +1,105 @@
+:root{
+    --full-width: 100%;
+    --clr-theme: darkgreen; 
+    --clr-light: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+.meat-intro{
+    text-align: center;
+    padding: 20px;
+}
+.meat-intro h2{
+    padding: 20px;
+    color: var(--clr-theme);
+    font-size: 1.5rem;
+}
+.sub-section{
+    text-align: center;
+    padding: 20px;
+    color: rgb(197, 0, 0);
+}
+.meat-product-container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 2em;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.meat-items{
+    width: 200px;
+    height: 270px;
+    background-color: var(--clr-light);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+}
+.meat-items select{
+    outline: none;
+    border: .5px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.073);
+
+}
+.meat-items img{
+    width: 90%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
+}
+.meat-items h3{
+    color:rgb(2, 31, 56);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.meat-items p{
+    font-size:0.9rem;
+}
+.meat-items a{
+    display: block;
+    align-items: center ;
+    width: var(--full-width);
+    height: 40px;
+    font-size: 0.9rem;
+    background-color: var(--clr-theme);
+    color: var(--clr-light);
+    text-decoration: none;
+    align-items: center;
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.meat-items a:hover{
+    background-color: #19460b;
+}
+.meat-items:hover{
+    transition: .3s;
+    box-shadow: 1px 1px 10px 4px rgb(142, 142, 142);
+    transform: scale(1.05);
+
+}
+.meat-items i{
+    margin-right: 5px;
+}
+.meat-main-image img{
+    width: var(--full-width);
+    height: 400px;
+    transition: transform .2s; 
+}
+}
+@media(max-width:700px){
+    main .meat-main-image img{
+        height: 230px;
+        width: var(--full-width);
+    }
+}
