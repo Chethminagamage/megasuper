@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Super: Online Shopping</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./reset.css" type="text/css">
+    <link rel="stylesheet" href="./orders.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="icon" href="./Images/logo22.png">
+</head> 
+<body>
+    <!--Header-->
+    <header id="header"> 
+        <nav>
+            <!--logo-->
+            <section class="logo"><a href="./index.html"><img src="./Images/logo22.png" type="image/x-icon" alt="Logo"></a></section>
+            <!--search box-->
+            <section class="search-box">
+                <input type="search" aria-label="search-box" placeholder="Search Items">
+            </section>
+            <!--location-selector-->
+            <section class="location">
+                <i class="fa fa-map-marker"></i>
+                <select name="location">
+                    <option value="Colombo">Kandy</option>
+                    <option value="Kandy">Colombo</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Kundasale">Kundasale</option>
+                  </select>
+            </section>
+            <!--sidebar-->
+            <ul class="sidebar">
+                <li onclick = hideSidebar()><a href="#" class="links"><i class="fa fa-times" aria-hidden="true">‎</i></a></li>
+                <li><a href="./index.html" class="links">Home</a></li>
+                <li><a href="./orders.html" class="links">Orders</a></li>
+                <li><a href="#" class="links">Products <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li><a href="./vegetables.html" class="sublinks">Vegetables</a></li>
+                <li><a href="./dairy.html" class="sublinks">Dairy Products</a></li>
+                <li><a href="./juices.html" class="sublinks">Beverages</a></li>
+                <li><a href="./cosmetics.html" class="sublinks">Cosmetics & Skin care</a></li>
+                <li><a href="./fruits.html" class="sublinks">Fruits</a></li>
+                <li><a href="./meat.html" class="sublinks">Meat & Seafood</a></li>
+                <li><a href="./baking.html" class="sublinks">Bakery & Cooking Ingredients</a></li>
+                <li><a href="./about.html" class="links">About Us</a></li>
+                <li><a href="#" class="links">Login | Sign Up <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+                <li><a href="./signup.html" class="sublinks">Member Login</a></li>
+                <li><a href="./login.html" class="sublinks">Loyalty Registration</a></li>
+                
+              </ul>
+              <!--nav bar-->
+              <ul>
+                <li class="hideOnMobile"><a href="./index.html" class="links">Home</a></li>
+                <li class="hideOnMobile"><a href="./orders.html" class="links">Orders</a></li>
+                <section class="dropdown">
+                    <li class="hideOnMobile"><a href="#" class="links">Products</a></li>
+                    <section class="dropdown-content">
+                      <a href="./vegetables.html">Vegetables</a> 
+                      <a href="./dairy.html">Dairy Products</a>
+                      <a href="./juices.html">Beverages</a> 
+                      <a href="./cosmetics.html">Cosmetics & Skin care</a>
+                      <a href="./fruits.html">Fruits</a>
+                      <a href="./meat.html">Meat & Seafood</a>
+                      <a href="./baking.html">Baking & Cooking Ingredients</a>
+                    </section>
+                </section>
+                <li class="hideOnMobile"><a href="./about.html" class="links">About Us</a></li>
+                <section class="dropdown">
+                    <li class="hideOnMobile"><a href="#" class="links"><i class="fa fa-user" aria-hidden="true"></i>Login | Sign Up</a>
+                    <section class="dropdown-content">
+                        <a href="./signup.html">Member Login</a>
+                        <a href="./login.html">Loyalty Registration</a>
+                    </section>
+                </section>
+                <li class="menu-button" onclick=showSidebar()><a href="#" class="links"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                    style="fill:#FFFFFF;">
+                    <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">‎</path>
+                    </svg></i></a></li>
+                <li class="cart"><class="links"><i class="fa fa-shopping-cart" aria-hidden="true"></a></i></li>
+              </ul>
+        </nav>
+
+        <!--JavaScript for side bar menu-->
+        <script>
+            function showSidebar(){
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+              const sidebar = document.querySelector('.sidebar') 
+              sidebar.style.display = 'none'
+            }
+        </script>
+
+    </header>
+    <main>
+       <section class="product-main-image">
+            <img src="./Images/horizontal-sale-banner-template-for-vegetarian-or-organic-product-vector copy.jpg" alt="order page main image">
+        </section> 
+
+        <!--fruit items section-->
+        <br>
+        <h2 class="heading">Order Here</h2>
+        <br>
+        <br>
+        <h2 class="sub-heading">Fruits</h2>
+        <section class="product-container">
+            <section class="product-items">
+                <img src="./images1/fruits/papaya.jpg" alt="papaya">
+                <h3>Papaya</h3>
+                <p class="price">Rs. 170</p>
+                <label for="papaya">Quantity (kg):</label>
+                <input type="number" id="papaya" name="papaya" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/apple.jpg" alt="apple">
+                <h3>Apple</h3>
+                <p class="price">Rs. 1950</p>
+                <label for="apple">Quantity (kg):</label>
+                <input type="number" id="apple" name="apple" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/anoda.jpg" alt="anoda">
+                <h3>Anoda</h3>
+                <p class="price">Rs. 250</p>
+                <label for="anoda">Quantity (kg):</label>
+                <input type="number" id="anoda" name="anoda" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/banana.jpg" alt="banana">
+                <h3>Banana</h3>
+                <p class="price">Rs. 250</p>
+                <label for="banana">Quantity (kg):</label>
+                <input type="number" id="banana" name="banana" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/delum.jpg" alt="delum">
+                <h3>Delum</h3>
+                <p class="price">Rs. 1340</p>
+                <label for="delum">Quantity (kg):</label>
+                <input type="number" id="delum" name="delum" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/dragonfruit.jpg" alt="dragon fruit">
+                <h3>Dragon Fruit</h3>
+                <p class="price">Rs. 1550</p>
+                <label for="dragon fruit">Quantity (kg):</label>
+                <input type="number" id="dragon fruit" name="dragon fruit" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/duriyan.jpg" alt="durian"> 
+                <h3>Durian</h3>
+                <p class="price">Rs. 480</p>
+                <label for="durian">Quantity (kg):</label>
+                <input type="number" id="durian" name="durian" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/fruits/grapes.jpg" alt="grapes">
+                <h3>Grapes</h3>
+                <p class="price">Rs. 2010</p>
+                <label for="grapes">Quantity (kg):</label>
+                <input type="number" id="grapes" name="grapes" min="0" step="0.1" placeholder="0">
+            </section>
+       
+        </section>
+
+        <!--vegetables section-->
+        <br>
+        <br>
+        <h2 class="sub-heading">Vegetables</h2>
+        <section class="product-container">
+            <section class="product-items">
+                <img src="./Images/vegetables/tomato.jpeg" alt="tomato">
+                <h3>Tomato</h3>
+                <p class="price">Rs. 80 / 100g</p>        
+                <label for="tomato">Quantity (kg):</label>
+                <input type="number" id="tomato" name="tomato" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/b onions.jpeg" alt="red onions">
+                <h3>Red Onions</h3>
+                <p class="price">Rs. 47 / 100g</p>
+                <label for="red onions">Quantity (kg):</label>
+                <input type="number" id="red onions" name="red onions" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/beetroot.jpeg" alt="beetroot">
+                <h3>Beetroot</h3>
+                <p class="price">Rs. 45 / 100g</p>
+                <label for="beetroot">Quantity (kg):</label>
+                <input type="number" id="beetroot" name="beetroot" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/bellpepper.jpeg" alt="bell pepper">
+                <h3>Bell pepper</h3>
+                <p class="price">Rs. 87 / 100g</p>
+                <label for="bell pepper">Quantity (kg):</label>
+                <input type="number" id="bell pepper" name="bell pepper" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/breadfruit.jpeg" alt="bread fruit">
+                <h3>Bread Fruit</h3>
+                <p class="price">Rs. 29 / 100g</p>
+                <label for="bread fruit">Quantity (kg):</label>
+                <input type="number" id="bread fruit" name="bread fruit" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/cabbage.jpeg" alt="cabbage">
+                <h3>Cabbage</h3>
+                <p class="price">Rs. 20 / 100g</p>
+                <label for="cabbage">Quantity (kg):</label>
+                <input type="number" id="cabbage" name="cabbage" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/carrot.jpeg" alt="carrot">
+                <h3>Carrot</h3>
+                <p class="price">Rs. 26 / 100g</p>
+                <label for="carrot">Quantity (kg):</label>
+                <input type="number" id="carrot" name="carrot" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/vegetables/chillies.jpeg" alt="chillies">
+                <h3>Green Chillies</h3>
+                <p class="price">Rs. 29 / 100g</p>
+                <label for="green chillies">Quantity (kg):</label>
+                <input type="number" id="green chillies" name="green chillies" min="0" step="0.1" placeholder="0">
+            </section>
+       
+        </section>
+
+        <!--dairy products section-->
+        <br>
+        <br>
+        <h2 class="sub-heading">Dairy Products</h2>
+        <section class="product-container">
+            <section class="product-items">
+                <img src="./Images/dairy/ambewala milk.jpeg" alt="ambewala milk">
+                <h3>Ambewela Milk</h3>
+                <p class="price">Rs. 550</p>      
+                <label for="ambewala milk">Quantity :</label>
+                <input type="number" id="ambewala milk" name="ambewala milk" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/ambewelayoghurtpack.jpeg" alt="ambewela pack">
+                <h3>Ambewela Pack</h3>
+                <p class="price">Rs. 460</p>
+                <label for="ambewala pack">Quantity :</label>
+                <input type="number" id="ambewala pack" name="ambewala pack" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/anchorcheese.jpeg" alt="anchor cheese">
+                <h3>Anchor Cheese</h3>
+                <p class="price">Rs. 940</p>
+                <label for="anchor cheese">Quantity :</label>
+                <input type="number" id="anchor cheese" name="anchor cheese" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/anchordrinking.jpeg" alt="drinking yoghurt">
+                <h3>Drinking Yoghurt</h3>
+                <p class="price">Rs. 170</p>
+                <label for="drinking yoghurt">Quantity :</label>
+                <input type="number" id="drinking yoghurt" name="drinking yoghurt" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/anchoryoghurt.jpeg" alt="anchor yoghurt">
+                <h3>Anchor Yoghurt</h3>
+                <p class="price">Rs. 180</p>
+                <label for="anchor yoghurt">Quantity :</label>
+                <input type="number" id="anchor yoghurt" name="anchor yoghurt" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/arlanaturalcheese.jpeg" alt="arla havarti cheese">
+                <h3>Arla Havarti</h3>
+                <p class="price"p>Rs. 1970</p>
+                <label for="arla havarti">Quantity :</label>
+                <input type="number" id="arla havarti" name="arla havarti" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/cheddar.jpeg" alt="kraft cheddar"> 
+                <h3>Kraft Cheddar</h3>
+                <p class="price">Rs. 2700</p>
+                <label for="kraft cheddar">Quantity :</label>
+                <input type="number" id="kraft cheddar" name="kraft cheddar" min="0" step="0" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./Images/dairy/happycowcheese.jpeg" alt="happy cow cheese">
+                <h3>Happy Cow Cheese</h3>
+                <p class="price">Rs. 1780</p>
+                <label for="happy cow">Quantity :</label>
+                <input type="number" id="happy cow" name="happy cow" min="0" step="0" placeholder="0">
+            </section>
+       
+        </section>
+
+        <!--meat and seafood section-->
+        <br>
+        <br>
+        <h2 class="sub-heading">Meat & Seafood</h2>
+        <section class="product-container">
+            <section class="product-items">
+                <img src="./images1/meat/bairaha sausages.jpg" alt="bairaha sausages">
+                <h3>Bairaha Sausages</h3>
+                <p class="price">Rs. 530</p>    
+                <label for="bairaha">Quantity (kg):</label>
+                <input type="number" id="bairaha" name="bairaha" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/chicken .jpg" alt="chicken">
+                <h3>Chicken Breast</h3>
+                <p class="price">Rs. 1250</p>
+                <label for="chicken breast">Quantity (kg):</label>
+                <input type="number" id="chicken breast" name="chicken breast" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/pork sausages.jpg" alt="pork sausages">
+                <h3>Pork Sausages</h3>
+                <p class="price">Rs. 1190</p>
+                <label for="pork sausages">Quantity (kg):</label>
+                <input type="number" id="pork sausages" name="pork sausages" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/meatballs.jpg" alt="meatballs">
+                <h3>Chicken Meatballs</h3>
+                <p class="price">Rs. 430</p>
+                <label for="chicken meatballs">Quantity (kg):</label>
+                <input type="number" id="chicken meatballs" name="chicken meatballs" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/cuttlefish.jpg" alt="cuttlefish">
+                <h3>Cuttlefish</h3>
+                <p class="price">Rs. 1100</p>
+                <label for="cuttlefish">Quantity (kg):</label>
+                <input type="number" id="cuttlefish" name="cuttlefish" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/octapus.jpg" alt="octopus">
+                <h3>Octopus</h3>
+                <p class="price">Rs. 1510</p>
+                <label for="octopus">Quantity (kg):</label>
+                <input type="number" id="octopus" name="octopus" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/prawns.jpg" alt="prawns">
+                <h3>Prawns</h3>
+                <p class="price">Rs. 2200</p>
+                <label for="prawns">Quantity (kg):</label>
+                <input type="number" id="prawns" name="prawns" min="0" step="0.1" placeholder="0">
+            </section>
+
+            <section class="product-items">
+                <img src="./images1/meat/tuna.jpg" alt="tuna">
+                <h3>Tuna</h3>
+                <p class="price">Rs. 2190</p>
+                <label for="tuna">Quantity (kg):</label>
+                <input type="number" id="tuna" name="tuna" min="0" step="0.1" placeholder="0">
+            </section>
+       
+        </section>
+
+         <!--baking and cooking ingredients section-->
+         <br>
+         <br>
+         <h2 class="sub-heading">Baking & Cooking Ingredients</h2>
+         <section class="product-container">
+             <section class="product-items">
+                <img src="./images1/baking/cake flour.jpg" alt="cake flour">
+                <h3>Prima Cake Flour</h3>
+                <p class="price">Rs. 390</p>    
+                 <label for="prima">Quantity :</label>
+                 <input type="number" id="prima" name="prima" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/baking powder.jpg" alt="baking powder">
+                <h3>Baking Powder</h3>
+                <p class="price">Rs. 230</p>
+                 <label for="baking powder">Quantity :</label>
+                 <input type="number" id="baking powder" name="baking powder" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/cocoa powder.jpg" alt="cocoa powder">
+                <h3>Cocoa Powder</h3>
+                <p class="price">Rs. 300</p>
+                 <label for="cocoa">Quantity :</label>
+                 <input type="number" id="cocoa" name="cocoa" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/coco-oil.jpg" alt="coconut oil">
+                <h3>Coconut Oil</h3>
+                <p class="price">Rs. 650</p>
+                 <label for="coconut oil">Quantity :</label>
+                 <input type="number" id="coconut oil" name="coconut oil" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/curry powder.jpg" alt="curry powder">
+                <h3>Curry Powder</h3>
+                <p class="price">Rs. 350</p>
+                 <label for="curry powder">Quantity :</label>
+                 <input type="number" id="curry powder" name="curry powder" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/chilli-powder.jpg" alt="chilli powder"> 
+                <h3>Chilli Powder</h3>
+                <p class="price">Rs. 370</p>
+                 <label for="chilli powder">Quantity :</label>
+                 <input type="number" id="chilli powder" name="chilli powder" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/icing sugar.jpg" alt="Icing sugar">
+                <h3>Icing sugar</h3>
+                <p class="price">Rs. 825</p>
+                 <label for="icing">Quantity :</label>
+                 <input type="number" id="icing" name="icing" min="0" step="0" placeholder="0">
+             </section>
+ 
+             <section class="product-items">
+                <img src="./images1/baking/caramel .jpg" alt="caramel">
+                <h3>Caramel</h3>
+                <p class="price">Rs. 280</p>
+                 <label for="caramel">Quantity :</label>
+                 <input type="number" id="caramel" name="caramel" min="0" step="0" placeholder="0">
+             </section>
+        
+         </section>
+         <br>
+         <br>
+         <h1 class="order-heading">Order <span class="summary-heading">Summary</span></h1>
+<section class="order-summary" id="cartSection">
+       <table class="order-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="order-table-body">
+            <tr>
+                <td class="first-data"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+       </table>
+
+       <section class="order-total">
+        <p class="order-total">Total: Rs. <span id="total-price">0</span></p>
+       </section>
+
+       <section class="button-group">
+        <button id="save-favorite">Save Order as Favorite</button>
+        <button id="apply-favorite">Apply Favorite</button>
+       </section>
+
+       <section class="checkout-button">
+       <a href="./payment.html" id="checkout-button">Buy Now</a>
+       </section>
+</section>
+<br>
+    </main>
+    <footer>
+        <section class="main-content">
+            <section class="left-box">
+                <h2>About Us</h2>
+                <section class="content">
+                    <p>Sri Lanka's freshest online grocery store offers daily necessities, same-day, next-day, and saver options, allowing customers to conveniently order from home or anywhere.</p>
+                    <section class="socials">
+                        <li><a href=""><i class="fa fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa fa-google"></i>Google</a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
+                    </section>
+                    <!--divider line -->
+                   <hr class="divider">
+                   
+                </section>
+            </section>
+            <section class="center-box">
+                <h2>Address</h2>
+                <section class="content">
+                    <section class="place">
+                        <i class="fa fa-map-marker" aria-hidden="true"> Kandy, Sri Lanka</i>  
+                    </section>
+                    <section class="phone">
+                        <i class="fa fa-phone" aria-hidden="true"> +94767538422</i>  
+                    </section>
+                    <section class="email">
+                        <i class="fa fa-envelope" aria-hidden="true"> megasuper@gmail.com</i>  
+                    </section>
+                    <!--divider line-->
+                    <hr class="divider">
+                    
+                </section>
+            </section>
+            <section class="right-box">
+                <h2>Contact Us</h2>
+                <section class="content">
+                    <form action="">
+                        <section class="email">
+                            <section class="text"> Email *</section>
+                            <input type="email" aria-label="email-input" required>
+                        </section>
+                        <section class="msg">
+                            <section class="text">Message *</section>
+                            <textarea type="text" rows="2" cols="25" aria-label="text-input" required></textarea>
+                        </section>
+                        <section class="button">
+                            <button type="submit">Submit</button>
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+        <section class="footer-bottom">
+            <section class="copyright">
+                <p>&copy;2024 Mega Super (Pvt) Ltd. All Rights Reserved</p>
+            </section>
+            <section class="payment-icons">
+                <img src="./Images/visa.png"  class="mastercard" alt="Mastercard-logo">
+                <img src="./Images/master card.png" class="visa" alt="Visa-logo">
+                <img src="./Images/american-express1.png" class="americanexpress" alt="American-Express-logo">
+            </section>
+        </section>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+<!--References for images-->
+<!-- 
+    Banner image - https://www.canva.com
+    Product images - https://www.keellssuper.com
+-->
