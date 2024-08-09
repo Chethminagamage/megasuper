@@ -175,6 +175,7 @@ main {
     padding: 10px;
     text-align: left;
     align-items: center;
+    width: 30%;
 }
 
 .order-table th {
